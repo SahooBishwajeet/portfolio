@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.top {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('bg.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 8% 0 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 45px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color:#f9004d;
+}
+
+span {
+    color: #f9004d;
+}
+
+.logo:hover span{
+    color:white;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;  
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color:#f9004d;
+    transition: 0.5s;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    color: white;
+    margin: 30px 0px 20px;
+    font-size: 100px;
+}
+h3 {
+    color: white;
+    margin-top: 30px;
+    font-size: 50px;
+}
+h4 {
+    color: #fcfc;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.social {
+    position: absolute;
+    display: flex;
+    bottom: 20%;
+    left: 9.5%;
+}
+
+.social a:not(:last-child) {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: #eee;
+    border-radius: 50%;
+    margin: 22px 10px;
+}
+
+.social a:hover:not(:last-child) {
+    background: #f9004d;
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+.button {
+    position: relative;
+    top: 23px;
+    height: 45px;
+    width: 120px;
+    margin-left: 40px;
+    background-color:#f9004d;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 13px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+.button:hover {
+    border: 2px solid #da0448;
+    background: transparent;
+    transition: 0.4s;
+    transform: scale(1.2);
+    box-shadow: 
+        inset 0px 0px 10px 2px #da0448;
+}
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    padding: 0px 0px 40px 20px;
+}
+
+.bottom p {
+    color: #eee;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
