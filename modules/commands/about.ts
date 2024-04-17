@@ -8,10 +8,16 @@ const createAbout = (): string[] => {
   const EMAIL = "Email";
   const GITHUB = "Github";
   const LINKEDIN = "Linkedin";
+  const TWITTER = "Twitter";
+  const INSTAGRAM = "Instagram";
+  const DISCORD = "Discord";
 
   const email = `<i class='fa-solid fa-envelope'></i> ${EMAIL}`;
   const github = `<i class='fa-brands fa-github'></i> ${GITHUB}`;
   const linkedin = `<i class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
+  const twitter = `<i class='fa-brands fa-twitter'></i> ${TWITTER}`;
+  const instagram = `<i class='fa-brands fa-instagram'></i> ${INSTAGRAM}`;
+  const discord = `<i class='fa-brands fa-discord'></i> ${DISCORD}`;
   let string = "";
 
   about.push("<br>");
@@ -38,6 +44,27 @@ const createAbout = (): string[] => {
   string += linkedin;
   string += SPACE.repeat(17 - LINKEDIN.length);
   string += `<a target='_blank' href='https://www.linkedin.com/in/${main.social.linkedin}'>linkedin/${main.social.linkedin}</a>`;
+  about.push(string);
+
+  string = '';
+  string += SPACE.repeat(2);
+  string += twitter;
+  string += SPACE.repeat(17 - TWITTER.length);
+  string += `<a target='_blank' href='https://twitter.com/${main.social.twitter}'>twitter/${main.social.twitter}</a>`;
+  about.push(string);
+
+  string = '';
+  string += SPACE.repeat(2);
+  string += discord;
+  string += SPACE.repeat(17 - DISCORD.length);
+  string += `<a target='_blank' href='https://discordapp.com/channels/@me/${main.social.discord}'>discord/${main.social.github}</a>`;
+  about.push(string);
+
+  string = '';
+  string += SPACE.repeat(2);
+  string += instagram;
+  string += SPACE.repeat(17 - INSTAGRAM.length);
+  string += `<a target='_blank' href='https://www.instagram.com/${main.social.instagram}'>instagram/${main.social.instagram}</a>`;
   about.push(string);
 
   about.push("<br>");
