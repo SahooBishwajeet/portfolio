@@ -27,7 +27,7 @@ const createBanner = (): string[] => {
 
   banner.push("Welcome To My Portfolio");
   banner.push("Type <span class='command'>'help'</span> for a list of all available commands.");
-  banner.push(`Type <span class='command'>'repo'</span> to view the GitHub repository or click <a href='${main.repository}' target='_blank'>here</a>.`);
+  banner.push(`Type <span class='command'>'curl repo'</span> to view the GitHub repository or click <a href='${main.repository}' target='_blank'>here</a>.`);
 
   banner.push("<br>");
 
