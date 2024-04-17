@@ -12,29 +12,54 @@
     "message": "Hello, Welcome To My Portfolio...",
     "projects": [
         [
-            "Project",
-            "Description",
-            "Link"
+            "Azzian",
+            "A funny pixel game about an Asian boy",
+            "https://github.com/codegasms/Azzian"
         ],
         [
-            "Project",
-            "Description",
-            "Link"
+            "MooM",
+            "Revolutionizing Dairy Farm Management",
+            "https://github.com/codegasms/appathon"
         ],
         [
-            "Project",
-            "Description",
-            "Link"
+            "Fluxicons",
+            "Identicons & Canvas Implementation For FLUX (Another Project)",
+            "https://github.com/codegasms/fluxicons"
         ],
         [
-            "Project",
-            "Description",
-            "Link"
+            "GameOfLife",
+            "John Conway's Game Of Life in C++",
+            "https://github.com/SahooBishwajeet/GameOfLife"
         ],
         [
-            "Project",
-            "Description",
-            "Link"
+            "MandelbrotFractal",
+            "Using SDL2 to generate Mandelbrot Fractal",
+            "https://github.com/SahooBishwajeet/MandelbrotFractal"
+        ],
+        [
+            "SudoGS",
+            "A Sudoku Generator & Solver In C++",
+            "https://github.com/SahooBishwajeet/SudoGS"
+        ],
+        [
+            "Asciify",
+            "Live camera feeds and images into beautiful ASCII art. ",
+            "https://github.com/SahooBishwajeet/Asciify"
+        ],
+        [
+            "RCharG",
+            "Random Character Generator In C",
+            "https://github.com/SahooBishwajeet/RCharG"
+        ],
+        [
+            "cnut",
+            "Terminal Animated Donut Written In C",
+            "https://github.com/SahooBishwajeet/cnut"
+        ],
+        [
+            "ColorEase",
+            "User-friendly color-centric toolkit",
+            "https://github.com/SahooBishwajeet/ColorEase"
         ]
     ],
     "colors": {
