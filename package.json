@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Terminal-Themed Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahooBishwajeet/Portfolio.git"
+  },
+  "author": "SahooBishwajeet (biswa.2004.bdk@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SahooBishwajeet/Portfolio/issues"
+  },
+  "homepage": "https://sahoobishwajeet.github.io/portfolio/",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.9"
+  }
+}
