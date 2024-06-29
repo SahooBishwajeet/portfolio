@@ -4,6 +4,7 @@
     "hostname": "void",
     "password": "3101",
     "repository": "https://github.com/SahooBishwajeet/Portfolio.git",
+    "braindump": "https://letmesleep.sahoobishwajeet.xyz",
     "social": {
         "linkedin": "bishwajeet-sahoo",
         "github": "SahooBishwajeet",
@@ -15,9 +16,39 @@
     "message": "Hello, Welcome To My Portfolio...",
     "projects": [
         [
+            "Portfolio",
+            "This terminal-themed portfolio website",
+            "https://github.com/SahooBishwajeet/portfolio"
+        ],
+        [
+            "LetMeSleep",
+            "A blog, which I like to call my Braindump",
+            "https://github.com/SahooBishwajeet/let-me-sleep"
+        ],
+        [
+            "Flux",
+            "A comprehensive file management utility for storage & manipulation",
+            "https://github.com/codegasms/flux"
+        ],
+        [
             "Azzian",
             "A funny pixel game about an Asian boy",
             "https://github.com/codegasms/Azzian"
+        ],
+        [
+            "BachavSetu",
+            "Disaster Management & Rescue Applicaton",
+            "https://github.com/dot-config-IIITS/application-SIH-BachavSetu"
+        ],
+        [
+            "Ensurance",
+            "AI-powered health insurance assistant",
+            "https://github.com/dot-config-IIITS/ensurance"
+        ],
+        [
+            "Vidscii",
+            "Command-line tool that converts video files into ASCII art in real-time",
+            "https://github.com/SahooBishwajeet/vidscii"
         ],
         [
             "MooM",
@@ -25,14 +56,14 @@
             "https://github.com/codegasms/appathon"
         ],
         [
-            "Fluxicons",
-            "Identicons & Canvas Implementation For FLUX (Another Project)",
-            "https://github.com/codegasms/fluxicons"
-        ],
-        [
             "GameOfLife",
             "John Conway's Game Of Life in C++",
             "https://github.com/SahooBishwajeet/GameOfLife"
+        ],
+        [
+            "Fluxicons",
+            "Identicons & Canvas Implementation For FLUX (Another Project)",
+            "https://github.com/codegasms/fluxicons"
         ],
         [
             "MandelbrotFractal",
@@ -66,26 +97,26 @@
         ]
     ],
     "colors": {
-        "background": "#0C0623",
-        "foreground": "#F8DDE5",
-        "banner": "#FF9951",
+        "background": "#282A36",
+        "foreground": "#F8F8F2",
+        "banner": "#BD93F9",
         "border": {
             "visible": true,
-            "color": "#FFADE2"
+            "color": "#44476A"
         },
         "prompt": {
-            "default": "#A5A7A7",
-            "user": "#FE6BC9",
-            "host": "#70FDFF",
-            "input": "#FF7685"
+            "default": "#6272A4",
+            "user": "#50FA7B",
+            "host": "#8BE9FD",
+            "input": "#F8F8F2"
         },
         "link": {
-            "text": "#B6AAEE",
-            "highlightColor": "#FFADE2",
-            "highlightText": "#0C0623"
+            "text": "#FF79C6",
+            "highlightColor": "#FFB86C",
+            "highlightText": "#282A36"
         },
         "commands": {
-            "textColor": "#FD9BDB"
+            "textColor": "#FF5555"
         }
     },
     "ascii": [
