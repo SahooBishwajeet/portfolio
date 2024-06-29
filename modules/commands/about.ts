@@ -1,10 +1,11 @@
-import main from '../../main.json' assert {type: 'json'};
+import main from "../../main.json" assert { type: "json" };
 
 const createAbout = (): string[] => {
   const about: string[] = [];
 
   const SPACE = "&nbsp;";
 
+  const BRAINDUMP = "Brain-Dump";
   const EMAIL = "Email";
   const GITHUB = "Github";
   const LINKEDIN = "Linkedin";
@@ -12,6 +13,7 @@ const createAbout = (): string[] => {
   const INSTAGRAM = "Instagram";
   const DISCORD = "Discord";
 
+  const braindump = `<i class='fa-solid fa-brain'></i> ${BRAINDUMP}`;
   const email = `<i class='fa-solid fa-envelope'></i> ${EMAIL}`;
   const github = `<i class='fa-brands fa-github'></i> ${GITHUB}`;
   const linkedin = `<i class='fa-brands fa-linkedin'></i> ${LINKEDIN}`;
@@ -27,40 +29,49 @@ const createAbout = (): string[] => {
   about.push("<br>");
 
   string += SPACE.repeat(2);
+  string += braindump;
+  string += SPACE.repeat(17 - BRAINDUMP.length);
+  string += `<a target='_blank' href='${main.braindump}'>${
+    main.braindump.split("/")[2]
+  }</a>`;
+  about.push(string);
+
+  string = "";
+  string += SPACE.repeat(2);
   string += email;
   string += SPACE.repeat(17 - EMAIL.length);
   string += `<a target='_blank' href='mailto:${main.social.email}'>${main.social.email}</a>`;
   about.push(string);
 
-  string = '';
+  string = "";
   string += SPACE.repeat(2);
   string += github;
   string += SPACE.repeat(17 - GITHUB.length);
   string += `<a target='_blank' href='https://github.com/${main.social.github}'>github/${main.social.github}</a>`;
   about.push(string);
 
-  string = '';
+  string = "";
   string += SPACE.repeat(2);
   string += linkedin;
   string += SPACE.repeat(17 - LINKEDIN.length);
   string += `<a target='_blank' href='https://www.linkedin.com/in/${main.social.linkedin}'>linkedin/${main.social.linkedin}</a>`;
   about.push(string);
 
-  string = '';
+  string = "";
   string += SPACE.repeat(2);
   string += twitter;
   string += SPACE.repeat(17 - TWITTER.length);
   string += `<a target='_blank' href='https://twitter.com/${main.social.twitter}'>twitter/${main.social.twitter}</a>`;
   about.push(string);
 
-  string = '';
+  string = "";
   string += SPACE.repeat(2);
   string += discord;
   string += SPACE.repeat(17 - DISCORD.length);
   string += `<a target='_blank' href='https://discordapp.com/channels/@me/${main.social.discord}'>discord/${main.social.github}</a>`;
   about.push(string);
 
-  string = '';
+  string = "";
   string += SPACE.repeat(2);
   string += instagram;
   string += SPACE.repeat(17 - INSTAGRAM.length);
@@ -68,7 +79,7 @@ const createAbout = (): string[] => {
   about.push(string);
 
   about.push("<br>");
-  return about
-}
+  return about;
+};
 
 export const ABOUT = createAbout();

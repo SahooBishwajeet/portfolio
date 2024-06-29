@@ -1,39 +1,20 @@
 const helpObj = {
-  "commands": [
-    [
-      "'cat about.me'",
-      "About Me",
-    ],
-    [
-      "'ls -la projects'",
-      "What did I cook?"
-    ],
-    [
-      "'whoami'",
-      "A very intriguing question."
-    ],
-    [
-      "'curl repo'",
-      "View the Github Repo."
-    ],
-    ["'neofetch'",
-      "Display the banner."
-    ],
-    [
-      "'clear'",
-      "Clear the terminal."
-    ],
-    [
-      "'roasted'",
-      "It's all on you, don't come crying to me."
-    ],
+  commands: [
+    ["'letmesleep'", "Visit my Brain-Dump"],
+    ["'cat about.me'", "About Me"],
+    ["'ls -la projects'", "What did I cook?"],
+    ["'whoami'", "A very intriguing question."],
+    ["'curl repo'", "View the Github Repo."],
+    ["'neofetch'", "Display the banner."],
+    ["'clear'", "Clear the terminal."],
+    ["'roasted'", "It's all on you, don't come crying to me."],
   ],
-}
+};
 
 const createHelp = (): string[] => {
-  const help: string[] = []
+  const help: string[] = [];
 
-  help.push("<br>")
+  help.push("<br>");
 
   helpObj.commands.forEach((ele) => {
     const SPACE = "&nbsp;";
@@ -47,17 +28,19 @@ const createHelp = (): string[] => {
     string += ele[1];
 
     help.push(string);
-  })
+  });
 
   help.push("<br>");
 
   help.push("Press <span class='keys'>[Tab]</span> for auto completion.");
   help.push("Press <span class='keys'>[Esc]</span> to clear the input line.");
-  help.push("Press <span class='keys'>[↑][↓]</span> to scroll through your history of commands.");
+  help.push(
+    "Press <span class='keys'>[↑][↓]</span> to scroll through your history of commands."
+  );
 
   help.push("<br>");
 
-  return help
-}
+  return help;
+};
 
 export const HELP = createHelp();
