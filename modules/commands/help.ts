@@ -1,12 +1,15 @@
 const helpObj = {
   commands: [
     ["'letmesleep'", "Visit my Brain-Dump"],
-    ["'cat about.me'", "About Me"],
     ["'ls -la projects'", "What did I cook?"],
-    ["'whoami'", "A very intriguing question."],
-    ["'curl repo'", "View the Github Repo."],
+    ["", ""],
     ["'neofetch'", "Display the banner."],
     ["'clear'", "Clear the terminal."],
+    ["", ""],
+    ["'cat about.me'", "About Me"],
+    ["'curl repo'", "View the Github Repo."],
+    ["'whoami'", "A very intriguing question."],
+    ["", ""],
     ["'roasted'", "It's all on you, don't come crying to me."],
   ],
 };
