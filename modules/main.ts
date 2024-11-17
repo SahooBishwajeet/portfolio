@@ -40,11 +40,13 @@ const COMMANDS = [
   "curl repo",
   "neofetch",
   "clear",
+  "wget resume",
 ];
 const HISTORY: string[] = [];
 const SUDO_PASSWORD = main.password;
 const REPO_LINK = main.repository;
 const BRAINDUMP = main.braindump;
+const RESUME = main.resume;
 
 const scrollToBottom = () => {
   const MAIN = document.getElementById("main");
@@ -258,6 +260,12 @@ function commandHandler(input: string) {
       writeLines(["Redirecting to github.com...", "<br>"]);
       setTimeout(() => {
         window.open(REPO_LINK, "_blank");
+      }, 500);
+      break;
+    case "wget resume":
+      writeLines(["Loading resume...", "<br>"]);
+      setTimeout(() => {
+        window.open(RESUME, "_blank");
       }, 500);
       break;
     case "linkedin":

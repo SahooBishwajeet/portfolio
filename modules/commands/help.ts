@@ -8,6 +8,7 @@ const helpObj = {
     ["", ""],
     ["'cat about.me'", "About Me"],
     ["'curl repo'", "View the Github Repo."],
+    ["'wget resume'", "Show my Resume."],
     ["'whoami'", "A very intriguing question."],
     ["", ""],
     ["'roasted'", "It's all on you, don't come crying to me."],
