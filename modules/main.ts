@@ -1,8 +1,8 @@
 import main from "../main.json" assert { type: "json" };
-import { HELP } from "./commands/help";
-import { BANNER } from "./commands/banner";
 import { ABOUT } from "./commands/about";
+import { BANNER } from "./commands/banner";
 import { DEFAULT } from "./commands/default";
+import { HELP } from "./commands/help";
 import { PROJECTS } from "./commands/projects";
 import { createWhoami } from "./commands/whoami";
 
@@ -115,7 +115,7 @@ function enterKey() {
   }
 
   /*
-    if input is empty or a collection of spaces, 
+    if input is empty or a collection of spaces,
     just insert a prompt before #write-lines
     */
   if (userInput.trim().length !== 0) {
