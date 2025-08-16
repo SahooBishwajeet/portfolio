@@ -68,3 +68,54 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "IIIT Sri City Alumni Portal",
+    des: "A full-stack platform connecting IIITS alumni and students with features for registration, profile management, networking, and robust admin controls.",
+    img: "/p1.svg",
+    iconLists: ["/re.svg", "/ts.svg", "/node.svg", "/mongo.svg", "/tail.svg"],
+    link: "https://alumni.iiits.in",
+  },
+  {
+    id: 2,
+    title: "Let Me Sleep",
+    des: "A Blog/Brain-Dump platform to share tech projects, walkthroughs, and thoughts with static site generation, tags, and dynamic pagination.",
+    img: "/p2.svg",
+    iconLists: ["/re.svg", "/ts.svg", "/mdx.svg", "/tail.svg"],
+    link: "https://letmesleep.sahoobishwajeet.xyz",
+  },
+  {
+    id: 3,
+    title: "LangSuit - Polyglot Platform",
+    des: "A modern language learning platform with interactive exercises, progress tracking, leaderboards, multi-language courses, and real-time analytics.",
+    img: "/p3.svg",
+    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/re.svg"],
+    link: "https://github.com/codegasms/langsuit",
+  },
+  {
+    id: 4,
+    title: "FLUX",
+    des: "An API-based file management and utility tool for efficient storage, exploration, and manipulation with authentication, encryption, and access control.",
+    img: "/p4.svg",
+    iconLists: ["/ts.svg", "/js.svg", "/html.svg", "/tail.svg"],
+    link: "https://github.com/codegasms/flux",
+  },
+  {
+    id: 5,
+    title: "SeePee",
+    des: "A terminal-based assistant for Codeforces contests with CLI and TUI interfaces to manage contest directories, test cases, and solutions.",
+    img: "/p5.svg",
+    iconLists: ["/py.svg", "/cpp.svg", "/bash.svg"],
+    link: "https://github.com/SahooBishwajeet/seepee",
+  },
+  {
+    id: 6,
+    title: "Argus",
+    des: "A Python tool to monitor WiFi uptime and bandwidth over time, acting as the perfect watchman for network health.",
+    img: "/p6.svg",
+    iconLists: ["/py.svg", "/bash.svg"],
+    link: "https://pypi.org/project/argus-wifi/",
+  },
+];
