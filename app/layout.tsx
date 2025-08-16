@@ -9,6 +9,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Bishwajeet's Portfolio",
   description: "Welcome to VoiD's portfolio",
+  openGraph: {
+    title: "Bishwajeet's Portfolio",
+    description: "Welcome to VoiD's portfolio",
+    url: "https://sahoobishwajeet.xyz",
+    siteName: "Bishwajeet's Portfolio",
+    images: [
+      {
+        url: "https://sahoobishwajeet.xyz/opengraph.png",
+        width: 1200,
+        height: 630,
+        alt: "Preview of Bishwajeet's Portfolio",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -18,9 +34,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
