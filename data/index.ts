@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -148,5 +148,23 @@ export const workExperience = [
     desc: "Led design, tech, and community initiatives. Built and showcased projects such as a GGJ 2024 game using C & RayLib. Supported event organization and technical workshops.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+  },
+];
+
+export const socialMedia = [
+  {
+    id: 1,
+    name: "github",
+    link: "https://github.com/SahooBishwajeet",
+  },
+  {
+    id: 2,
+    name: "linkedin",
+    link: "https://linkedin.com/in/bishwajeet-sahoo",
+  },
+  {
+    id: 3,
+    name: "twitter",
+    link: "https://x.com/2004SahooBishwa",
   },
 ];

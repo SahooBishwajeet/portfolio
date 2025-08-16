@@ -3,6 +3,7 @@
 import { navItems } from "@/data";
 
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
@@ -17,6 +18,7 @@ const Home = () => {
         <Grid />
         <RecentProjects />
         <Experience />
+        <Footer />
       </div>
     </main>
   );
