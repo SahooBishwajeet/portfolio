@@ -119,3 +119,34 @@ export const projects = [
     link: "https://pypi.org/project/argus-wifi/",
   },
 ];
+
+export const workExperience = [
+  {
+    id: 1,
+    title: "Analyst Intern - Swiggy",
+    desc: "Engineered a scalable Route Planner API using Google OR-Tools, FastAPI & Python, reducing cost per delivery by 30%. Automated inventory workflows with GenAI, cutting manual processing time from 1 hour to 5 minutes.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "Software Developer Intern - AgriVision4U",
+    desc: "Built ENest, an EdTech platform for mentorship, guidance, and courses using NextJS, TypeScript & TailwindCSS. Developed a real-time backend API with ExpressJS & NodeJS.",
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg",
+  },
+  {
+    id: 3,
+    title: "Co-Lead & Volunteer - Google DSC/DG (IIITS)",
+    desc: "Organized and spoke at 8+ tech and non-tech events on Resume Building, Open Source, and more. Facilitated coding challenges, workshops, and hackathons for 1500+ members.",
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Volunteer - IOTA & ENIGMA (IIITS)",
+    desc: "Led design, tech, and community initiatives. Built and showcased projects such as a GGJ 2024 game using C & RayLib. Supported event organization and technical workshops.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+];
