@@ -1,0 +1,175 @@
+{
+  "title": "Bishwajeet Sahoo",
+  "username": "guest",
+  "hostname": "void",
+  "password": "3101",
+  "repository": "https://github.com/SahooBishwajeet/Portfolio.git",
+  "braindump": "https://letmesleep.sahoobishwajeet.xyz",
+  "resume": "https://drive.google.com/file/d/1WxHdQ2DXgDOaqZb2Ai5Cj17iV0dgj36N/view",
+  "social": {
+    "linkedin": "bishwajeet-sahoo",
+    "github": "SahooBishwajeet",
+    "discord": "729644267856986114",
+    "instagram": "voidinlimbo",
+    "twitter": "2004SahooBishwa",
+    "email": "biswa.2004.bdk@gmail.com"
+  },
+  "message": "Hello, Welcome To My Portfolio...",
+  "projects": {
+    "personal": [
+      [
+        "IIITS Alumni Portal",
+        "Alumni & Students Portal For IIITS",
+        "https://github.com/iiits/alumni-portal"
+      ],
+      [
+        "LetMeSleep",
+        "A blog, which I like to call my Braindump",
+        "https://github.com/SahooBishwajeet/let-me-sleep"
+      ],
+      [
+        "Argus",
+        "Python tol to monitor wifi networks",
+        "https://github.com/SahooBishwajeet/argus"
+      ],
+      [
+        "garrulous",
+        "Attention-Based infinite Shakespearean text generator with Read-Aloud (TTS)",
+        "https://github.com/SahooBishwajeet/garrulous"
+      ],
+      [
+        "ls-tego-b",
+        "Python tool to perform LSB steganography on images and audio files",
+        "https://github.com/SahooBishwajeet/ls-tego-b"
+      ],
+      [
+        "Scrapeet",
+        "A web scraping tool to scrape Leetcode problems",
+        "https://github.com/SahooBishwajeet/scrapeet"
+      ],
+      [
+        "Vidscii",
+        "Command-line tool that converts video files into ASCII art in real-time",
+        "https://github.com/SahooBishwajeet/vidscii"
+      ],
+      [
+        "GameOfLife",
+        "John Conway's Game Of Life in C++",
+        "https://github.com/SahooBishwajeet/GameOfLife"
+      ],
+      [
+        "MandelbrotFractal",
+        "Using SDL2 to generate Mandelbrot Fractal",
+        "https://github.com/SahooBishwajeet/MandelbrotFractal"
+      ],
+      [
+        "SudoGS",
+        "A Sudoku Generator & Solver In C++",
+        "https://github.com/SahooBishwajeet/SudoGS"
+      ],
+      [
+        "Asciify",
+        "Live camera feeds and images into beautiful ASCII art. ",
+        "https://github.com/SahooBishwajeet/Asciify"
+      ],
+      [
+        "RCharG",
+        "Random Character Generator In C",
+        "https://github.com/SahooBishwajeet/RCharG"
+      ],
+      [
+        "cnut",
+        "Terminal Animated Donut Written In C",
+        "https://github.com/SahooBishwajeet/cnut"
+      ],
+      [
+        "ColorEase",
+        "User-friendly color-centric toolkit",
+        "https://github.com/SahooBishwajeet/ColorEase"
+      ]
+    ],
+    "contributions": [
+      [
+        "Flux",
+        "A comprehensive file management utility for storage & manipulation",
+        "https://github.com/codegasms/flux"
+      ],
+      [
+        "Langsuit",
+        "A language learning application (Become a Polyglot)",
+        "https://github.com/codegasms/langsuit"
+      ],
+      [
+        "Chakravyuh",
+        "An all-in-one platform for CTF style challenge management",
+        "https://github.com/gdg-iiits/chakravyuh"
+      ],
+      [
+        "Sisyphus",
+        "Load Balancer in GO",
+        "https://github.com/codegasms/sisyphus"
+      ],
+      [
+        "Azzian",
+        "A funny pixel game about an Asian boy",
+        "https://github.com/codegasms/Azzian"
+      ],
+      [
+        "BachavSetu",
+        "Disaster Management & Rescue Applicaton",
+        "https://github.com/dot-config-IIITS/application-SIH-BachavSetu"
+      ],
+      [
+        "Ensurance",
+        "AI-powered health insurance assistant",
+        "https://github.com/dot-config-IIITS/ensurance"
+      ],
+      [
+        "MooM",
+        "Revolutionizing Dairy Farm Management",
+        "https://github.com/codegasms/appathon"
+      ],
+      [
+        "Fund33",
+        "Blockchain-Based Crowdfunding Platform",
+        "https://github.com/codegasms/web3ssh"
+      ],
+      [
+        "Fluxicons",
+        "Identicons & Canvas Implementation For FLUX (Another Project)",
+        "https://github.com/codegasms/fluxicons"
+      ]
+    ]
+  },
+  "colors": {
+    "background": "#282A36",
+    "foreground": "#F8F8F2",
+    "banner": "#BD93F9",
+    "border": {
+      "visible": true,
+      "color": "#44476A"
+    },
+    "prompt": {
+      "default": "#6272A4",
+      "user": "#50FA7B",
+      "host": "#8BE9FD",
+      "input": "#F8F8F2"
+    },
+    "link": {
+      "text": "#FF79C6",
+      "highlightColor": "#FFB86C",
+      "highlightText": "#282A36"
+    },
+    "commands": {
+      "textColor": "#FF5555"
+    }
+  },
+  "ascii": [
+    "██╗   ██╗ ██████╗ ██╗██████╗ ",
+    "██║   ██║██╔═══██╗██║██╔══██╗",
+    "██║   ██║██║   ██║██║██║  ██║",
+    "╚██╗ ██╔╝██║   ██║██║██║  ██║",
+    " ╚████╔╝ ╚██████╔╝██║██████╔╝",
+    "  ╚═══╝   ╚═════╝ ╚═╝╚═════╝ "
+  ]
+}
