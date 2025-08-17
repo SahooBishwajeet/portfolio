@@ -11,6 +11,9 @@
   "dependencies": {
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.18.0",
+    "@tsparticles/engine": "^3.9.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "clsx": "^2.1.1",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.23.12",
