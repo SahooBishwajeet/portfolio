@@ -1,5 +1,6 @@
 const helpObj = {
   commands: [
+    ["'classic'", "Classic Mode of the Portfolio."],
     ["'letmesleep'", "Visit my Brain-Dump"],
     ["'ls -la projects'", "What did I cook?"],
     ["", ""],
@@ -11,7 +12,7 @@ const helpObj = {
     ["'wget resume'", "Show my Resume."],
     ["'whoami'", "A very intriguing question."],
     ["", ""],
-    ["'roasted'", "It's all on you, don't come crying to me."],
+    ["'roasted -[Y/N]'", "It's all on you, don't come crying to me."],
   ],
 };
 

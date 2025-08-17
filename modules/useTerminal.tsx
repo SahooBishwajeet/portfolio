@@ -15,7 +15,7 @@ export default function useTerminal() {
   const initialized = useRef(false);
 
   useEffect(() => {
-    if(initialized.current) return;
+    if (initialized.current) return;
     initialized.current = true;
 
     //mutWriteLines gets deleted and reassigned
@@ -45,7 +45,8 @@ export default function useTerminal() {
     const COMMANDS = [
       "classic",
       "letmesleep",
-      "roasted",
+      "roasted -Y",
+      "roasted -N",
       "help",
       "cat about.me",
       "ls -la projects",
@@ -73,6 +74,7 @@ export default function useTerminal() {
 
       switch (key) {
         case "Enter":
+          removeHints();
           e.preventDefault();
           if (!isPasswordInput) {
             enterKey();
@@ -83,14 +85,14 @@ export default function useTerminal() {
           scrollToBottom();
           break;
         case "Escape":
+          removeHints();
           USERINPUT.value = "";
           break;
         case "ArrowUp":
+        case "ArrowDown":
+          removeHints();
           arrowKeys(key);
           e.preventDefault();
-          break;
-        case "ArrowDown":
-          arrowKeys(key);
           break;
         case "Tab":
           tabKey();
@@ -142,14 +144,60 @@ export default function useTerminal() {
     }
 
     function tabKey() {
-      let currInput = USERINPUT.value;
+      removeHints();
+      const currInput = USERINPUT.value;
+      const matches = COMMANDS.filter((ele) => ele.startsWith(currInput));
 
-      for (const ele of COMMANDS) {
-        if (ele.startsWith(currInput)) {
-          USERINPUT.value = ele;
-          return;
+      if (matches.length === 0) return;
+
+      let commonPrefix = matches[0];
+      for (let i = 1; i < matches.length; i++) {
+        let j = 0;
+        while (j < commonPrefix.length && commonPrefix[j] === matches[i][j]) {
+          j++;
+        }
+        commonPrefix = commonPrefix.slice(0, j);
+      }
+
+      USERINPUT.value = commonPrefix;
+
+      const prevHints = document.getElementById("autocomplete-hints");
+      if (prevHints && prevHints.parentNode)
+        prevHints.parentNode.removeChild(prevHints);
+
+      if (matches.length > 1) {
+        const hintDiv = document.createElement("div");
+        hintDiv.id = "autocomplete-hints";
+        hintDiv.style.fontFamily = "monospace";
+        hintDiv.style.marginTop = "2px";
+        hintDiv.style.color = "lightgray";
+
+        const label = document.createElement("div");
+        label.innerText = "Options:";
+        label.style.color = "gray";
+        label.style.fontSize = "smaller";
+        hintDiv.appendChild(label);
+
+        matches.forEach((m) => {
+          const span = document.createElement("span");
+          span.innerText = m.slice(commonPrefix.length) + "  ";
+          hintDiv.appendChild(span);
+        });
+
+        if (doWriteLines && doWriteLines.parentNode) {
+          doWriteLines.parentNode.insertBefore(
+            hintDiv,
+            doWriteLines.nextSibling
+          );
+          scrollToBottom();
         }
       }
+    }
+
+    function removeHints() {
+      const prevHints = document.getElementById("autocomplete-hints");
+      if (prevHints && prevHints.parentNode)
+        prevHints.parentNode.removeChild(prevHints);
     }
 
     function arrowKeys(e: string) {
@@ -199,7 +247,10 @@ export default function useTerminal() {
             ]);
           } else {
             if (bareMode) {
-              writeLines(["Enough, What else are you trying to break?", "<br>"]);
+              writeLines([
+                "Enough, What else are you trying to break?",
+                "<br>",
+              ]);
             } else {
               writeLines([
                 "<br>",
@@ -216,8 +267,28 @@ export default function useTerminal() {
       }
 
       switch (input) {
-        case "roasted":
-          bareMode = !bareMode;
+        case "roasted -y":
+          if (bareMode)
+            writeLines([
+              "You are already being roasted. Figure out a way to stop this madness.",
+              "<br>",
+            ]);
+          else
+            writeLines([
+              "You came here on your own discretion. Do not blame me for what happens next.",
+              "<br>",
+            ]);
+          bareMode = true;
+          break;
+
+        case "roasted -n":
+          if (!bareMode)
+            writeLines([
+              "You are safe now. Use 'roasted -Y' to see the magic.",
+              "<br>",
+            ]);
+          else writeLines(["You safely exited the hellscape.", "<br>"]);
+          bareMode = false;
           break;
 
         case "clear":
@@ -228,6 +299,7 @@ export default function useTerminal() {
             doWriteLines = WRITELINESCOPY;
           });
           break;
+
         case "neofetch":
           if (bareMode) {
             writeLines(["Bishwajeet Sahoo Portfolio", "<br>"]);
@@ -235,6 +307,7 @@ export default function useTerminal() {
           }
           writeLines(BANNER);
           break;
+
         case "help":
           if (bareMode) {
             writeLines(["Maybe throwing away your PC will help...", "<br>"]);
@@ -242,6 +315,7 @@ export default function useTerminal() {
           }
           writeLines(HELP);
           break;
+
         case "whoami":
           if (bareMode) {
             writeLines([`${main.username}`, "<br>"]);
@@ -249,6 +323,7 @@ export default function useTerminal() {
           }
           writeLines(createWhoami());
           break;
+
         case "cat about.me":
           if (bareMode) {
             writeLines(["Maybe I'm the Illuminati...", "<br>"]);
@@ -256,6 +331,7 @@ export default function useTerminal() {
           }
           writeLines(ABOUT);
           break;
+
         case "ls -la projects":
           if (bareMode) {
             writeLines(["LOL !!! I don't want you to see them...", "<br>"]);
@@ -263,39 +339,47 @@ export default function useTerminal() {
           }
           writeLines(PROJECTS);
           break;
+
         case "letmesleep":
           writeLines(["Redirecting to brain-dump...", "<br>"]);
           setTimeout(() => {
             window.open(BRAINDUMP, "_blank");
           }, 500);
           break;
+
         case "classic":
           writeLines(["Redirecting to classic page...", "<br>"]);
           setTimeout(() => {
             window.open("/classic", "_blank");
           }, 500);
           break;
+
         case "curl repo":
           writeLines(["Redirecting to github.com...", "<br>"]);
           setTimeout(() => {
             window.open(REPO_LINK, "_blank");
           }, 500);
           break;
+
         case "wget resume":
           writeLines(["Loading resume...", "<br>"]);
           setTimeout(() => {
             window.open(RESUME, "_blank");
           }, 500);
           break;
+
         case "linkedin":
           //add stuff here
           break;
+
         case "github":
           //add stuff here
           break;
+
         case "email":
           //add stuff here
           break;
+
         case "rm -rf":
           if (bareMode) {
             writeLines(["This is dangerous. Don't try again.", "<br>"]);
@@ -311,6 +395,7 @@ export default function useTerminal() {
             writeLines(["Permission not granted.", "<br>"]);
           }
           break;
+
         case "sudo":
           if (bareMode) {
             writeLines(["Nahh!!", "<br>"]);
@@ -327,6 +412,7 @@ export default function useTerminal() {
           }, 100);
 
           break;
+
         case "ls":
           if (bareMode) {
             writeLines(["", "<br>"]);
@@ -339,6 +425,7 @@ export default function useTerminal() {
             writeLines(["Permission not granted.", "<br>"]);
           }
           break;
+
         default:
           if (bareMode) {
             writeLines(["type 'help'", "<br>"]);
@@ -355,6 +442,8 @@ export default function useTerminal() {
         displayText(item, idx);
       });
     }
+
+    writeLines(BANNER);
 
     function displayText(item: string, idx: number) {
       setTimeout(() => {
@@ -460,10 +549,6 @@ export default function useTerminal() {
 
       updateUser();
 
-      window.addEventListener("load", () => {
-        writeLines(BANNER);
-      });
-
       USERINPUT.addEventListener("keypress", userInputHandler);
       USERINPUT.addEventListener("keydown", userInputHandler);
       PASSWORD_INPUT.addEventListener("keypress", userInputHandler);
@@ -479,6 +564,5 @@ export default function useTerminal() {
     };
 
     initEventListeners();
-
   }, []);
 }
